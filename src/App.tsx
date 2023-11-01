@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box } from '@chakra-ui/react';
+import { Route, Routes } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import SearchPage from './components/SearchPage';
+import HistoryPage from './components/HistoryPage';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Box>
+            <NavBar />
+            <Routes>
+                <Route path="/search" element={<SearchPage />} />
+                <Route path="/history" element={<HistoryPage />} />
+                <Route path="/">{/* Default Component or Redirect */}</Route>
+            </Routes>
+        </Box>
+    );
 }
 
 export default App;
