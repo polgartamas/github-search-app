@@ -44,7 +44,6 @@ export const searchRepositories = async (options: SearchOptions) => {
     }
 
     let query = queryComponents.join(' AND ');
-    console.log('query:', query);
 
     if (options.username) {
         query += ` user:${options.username}`;

@@ -54,7 +54,6 @@ const SearchResults = ({
     sortDirection,
     setSortDirection,
 }: SearchResultsProps): React.ReactElement | null => {
-    console.log('RESULTS:', results);
     const [currentPage, setCurrentPage] = useState(1);
     const [resultsPerPage, setResultsPerPage] = useState(10);
 

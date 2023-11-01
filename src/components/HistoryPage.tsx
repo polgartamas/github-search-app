@@ -4,12 +4,11 @@ import { Box, Flex, Heading, List, ListItem, Text } from '@chakra-ui/react';
 import { Resizable } from 're-resizable';
 import SearchResults from './SearchResults';
 
-// This component is responsible for rendering the previous searches, and the actual search.
+// This component is responsible for rendering the previous calls, and the actual search.
 
 const HistoryPage = () => {
     const urls = useSelector((state: any) => state.history.apiUrls);
     const results = useSelector((state: any) => state.search.searchResults);
-    console.log('RESULTSfromHISTORY:', results);
     return (
         <Flex flexDirection="row">
             <Resizable

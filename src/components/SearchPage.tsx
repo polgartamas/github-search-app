@@ -101,7 +101,6 @@ function SearchPage() {
         try {
             const data = await searchRepositories(searchOptions);
             dispatch(setSearchResults(data.items));
-            console.log('RESULTS:', results);
         } catch (error) {
             alert('Error during search process!');
             console.error('Error during search:', error);
